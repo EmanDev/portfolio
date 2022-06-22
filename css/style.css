@@ -1,0 +1,37 @@
+/*
+ * Style.css by Eman Marcaida (EmanDev)
+ * A CSS base modifier of certain classes and IDs
+ * Custom-made 15/04/2021
+ * Updated - 22/06/2022
+ */
+
+/* Reserved */
+
+.dark-wall {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/dark.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.light-wall {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/white.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.center-this-item{
+    display: grid;
+    place-items: center;
+}
+
+/*
+.dl-fr {
+    float: right;
+}
+
+.dl-mr-10 {
+    margin-right: 10px;
+}
+*/
