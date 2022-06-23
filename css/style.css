@@ -2,7 +2,7 @@
  * Style.css by Eman Marcaida (EmanDev)
  * A CSS base modifier of certain classes and IDs
  * Custom-made 15/04/2021
- * Updated - 22/06/2022
+ * Updated - 23/06/2022
  */
 
 /* Reserved */
@@ -24,4 +24,8 @@
 .center-this-item{
     display: grid;
     place-items: center;
+}
+
+.disabled-click {
+    pointer-events: none !important;
 }
