@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -49,10 +50,6 @@
 
         .ee-color {
             color: #f0d53d;
-        }
-
-        li#li-thunder {
-            list-style-image: url(img/thunder-16.png);
         }
     </style>
 </head>
@@ -234,7 +231,7 @@
                 <div class="sidebar-divider"></div>
                 <a href="#" class="sidebar-link sidebar-link-with-icon active">
                     <span class="sidebar-icon">
-                        <i class="fas fa-briefcase" aria-hidden="true"></i>
+                        <i class="fas fa-briefcase text-primary" aria-hidden="true"></i>
                     </span>
                     Home
                 </a>
@@ -244,7 +241,7 @@
                     </span>
                     Internship Preliminaries
                 </a>
-                <a href="training-plan.html" class="sidebar-link sidebar-link-with-icon">
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
                     <span class="sidebar-icon">
                         <i class="fas fa-map" aria-hidden="true"></i>
                     </span>
@@ -520,11 +517,9 @@
         //load theme alert
         function toastAlert() {
             var alertcontent =
-                "<p class='text-justify'>This website only works properly on desktop but mobile screen-sizes are supported. Selected theme is also saved by default using cookies.</p>";
-            var alertcontent2 =
-                "<li>This website only works properly on desktop but mobile screen-sizes are supported. </li><li>Selected theme is also saved by default using cookies.</li>";
+                "<p class='text-justify'>• This website only works properly on desktop but mobile screen-sizes are supported.</p><p class='text-justify'>• Selected theme is also saved by default using cookies.</p>";
             halfmoon.initStickyAlert({
-                content: alertcontent2,
+                content: alertcontent,
                 alertType: "alert-primary",
                 title: "Internship Portfolio",
                 fillType: "filled-dm",
