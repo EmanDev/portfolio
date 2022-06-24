@@ -21,7 +21,7 @@
     background-attachment: fixed;
 }
 
-.center-this-item{
+.center-this-item {
     display: grid;
     place-items: center;
 }
