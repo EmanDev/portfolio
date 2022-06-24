@@ -29,3 +29,8 @@
 .disabled-click {
     pointer-events: none !important;
 }
+
+.center-but-justified {
+    text-align: justify;
+    text-align-last: center;
+}
