@@ -59,11 +59,450 @@
             }
         </style>
     </head>
-    <body>
+    <body class="with-custom-webkit-scrollbars with-custom-css-scrollbars dark-mode" data-set-preferred-mode-onload="true">
         <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <script src="" async defer></script>
+                <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+        <!-- Page wrapper with .with.navbar .with-sidebar .with-navbar-fixed-bottom class -->
+        <div data-sidebar-hidden="hidden" data-sidebar-type="overlayed-all"
+            class="page-wrapper with-navbar with-sidebar with-navbar-fixed-bottom">
+            <!-- Navbar (immediate child of the page wrapper) -->
+            <nav class="navbar">
+                <!-- Navbar content (with toggle sidebar button) -->
+                <div class="navbar-content">
+                    <button class="btn" type="button" onclick="halfmoon.toggleSidebar()">
+                        <i class="fas fa-bars"></i>
+                        <span class="sr-only">Toggle Sidebar</span>
+                        Menu
+                    </button>
+                </div>
+                <!-- Navbar brand -->
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/pfp-circle.png" alt="Eman Marcaida">
+                    Internship Portfolio
+                </a>
+                <!-- Navbar text -->
+                <!-- Text here -->
+                <!-- Navbar nav -->
+                <div class="form-inline d-md-flex navbar-content ml-auto">
+                    <button id="themer" data-toggle="tooltip" data-title="Toggle Dark Mode" data-placement="left"
+                        class="btn btn-primary" type="button" onclick="halfmoon.toggleDarkMode()"
+                        aria-label="Toggle Dark Mode"><i class="fas fa-moon" aria-hidden="true"></i></button>
+                </div>
+            </nav>
+    
+            <!-- toasts -->
+            <div class="sticky-alerts"></div>
+    
+            <!-- Modals -->
+            <div class="modal" id="modal-info" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content text-justify">
+                        <a href="#" class="close" role="button" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </a>
+                        <h4 class="modal-title">Information</h5>
+                            <hr>
+                            <h5 class="modal-title">Privacy</h5>
+                            <p>
+                                EmanDev.GitHub.Io does not collect any data from the people. This website is simply a static
+                                one and does not contain services which requires a user to input data onto fields that would
+                                ask for any personal information.
+                            </p>
+                            <hr>
+                            <h5 class="modal-title">Security</h5>
+                            <p>Due to the nature of the internet, some websites host files that are malicious and may cause
+                                problems to the users. EmanDev.GitHub.Io does not contain any of those files. For this
+                                reason, source of this website is <b>open</b> to the public.
+                                <br>
+                                <br>
+                                Check this link for further details: <a href="https://github.com/EmanDev?tab=repositories"
+                                    target="_blank">GitHub Repositories</a>
+                            </p>
+                            <hr>
+                            <h5 class="modal-title">Copyrights</h5>
+                            <p>All possible items (images, videos, files, and etc) that can be seen here are free to use and
+                                others that are here are probably made by Me. Items made by different creators that have
+                                been used will be credited and thanked. If you have items here that I have used as part of
+                                this website and you think I do not have the permission for it to use, please contact me as
+                                soon as possible.
+                                <br>
+                                <br>
+                                Contact me through: <a
+                                    href="mailto:emzzdroidlollipop@gmail.com">emzzdroidlollipop@gmail.com</a>.
+                            </p>
+    
+                            <div class="text-center  mt-20">
+                                <!-- text-right = text-align: right, mt-20 = margin-top: 2rem (20px) -->
+                                <a href="#" class="btn btn-block mr-5" role="button">Close</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!--Class Work Modal-->
+            <div class="modal" id="classWorkModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <a href="#" class="close" role="button" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </a>
+                        <h5 class="modal-title text-center">Classwork Thread</h5>
+                        <br>
+                        <p class="text-center">
+                            <img style="height: auto; max-width: 100%;" src="img/info-xxl.png" alt="Information Logo">
+                        </p>
+                        <br>
+                        <p class="text-center" style="color: red"><b>AUTHORIZE MEMBERS ONLY</b></p>
+                        <p class="text-center">
+                            Classwork thread is available <b>only</b> if you are invited to the class using code or invite
+                            link through your Google Education Account.
+                        </p>
+                        <div class="text-center mt-20">
+                            <!-- text-right = text-align: right, mt-20 = margin-top: 2rem (20px) -->
+                            <a href="https://classroom.google.com/c/NDg4MDkxODg2OTcw/a/NTM0NzQ2OTM1MzI5/details"
+                                target="_blank" class="btn btn-primary btn-block mr-5" role="button">Open</a>
+                            <div style="line-height: 75%;"><br></div>
+                            <a href="#" class="btn btn-block mr-5" role="button">Dismiss</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!--Framework Modal-->
+            <div class="modal" id="frameworkModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <a href="#" class="close" role="button" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </a>
+                        <h5 class="modal-title">Website Framework</h5>
+                        <p class="text-justify">
+                            The following frameworks are being used in this website.
+                        </p>
+                        <ul class="ul-modal">
+                            <li>1. <a href="https://www.gethalfmoon.com/docs/introduction/">halfmoon</a> - a beautiful
+                                front-end css framework with a built-in dark mode.</li>
+                            <li>2. <a href="https://fontawesome.com/icons">fontawesome</a> - nice and elegant css/svg icons,
+                                currently using 5.15 version.</li>
+                        </ul>
+                        <div class="text-center mt-20">
+                            <!-- text-right = text-align: right, mt-20 = margin-top: 2rem (20px) -->
+                            <a href="#" class="btn btn-primary btn-block mr-5" role="button">Okay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!--Photo Credits Modal-->
+            <div class="modal" id="credits" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <a href="#" class="close" role="button" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </a>
+                        <h5 class="modal-title">Credits</h5>
+                        <p class="text-justify">
+                            The following are credited for their work and thanked for allowing people to use their work.
+                        </p>
+                        <ul class="ul-modal">
+                            <li>1. Photo by <a
+                                    href="https://unsplash.com/@dokawastaken?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tim
+                                    Kabel</a> on <a
+                                    href="https://unsplash.com/s/photos/circuit?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.
+                            </li>
+                            <li>2. Photo by <a
+                                    href="https://unsplash.com/@sahandbabali?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sahand
+                                    Babali</a> on <a
+                                    href="https://unsplash.com/s/photos/circuit?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.
+                            </li>
+                            <li>3.
+                                Icons by <a href="https://www.flaticon.com/">Flaticon</a>.
+                            </li>
+                        </ul>
+                        <div class="text-center mt-20">
+                            <!-- text-right = text-align: right, mt-20 = margin-top: 2rem (20px) -->
+                            <a href="#" class="btn btn-primary btn-block mr-5" role="button">Okay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="sidebar-overlay" onclick="halfmoon.toggleSidebar()"></div>
+    
+            <div class="sidebar">
+                <div class="sidebar-menu">
+                    <h5 class="sidebar-title">Navigation</h5>
+                    <div class="sidebar-divider"></div>
+                    <a href="index.html" class="sidebar-link sidebar-link-with-icon">
+                        <span class="sidebar-icon">
+                            <i class="fas fa-briefcase" aria-hidden="true"></i>
+                        </span>
+                        Home
+                    </a>
+                    <a href="internship-preliminaries.html" class="sidebar-link sidebar-link-with-icon">
+                        <span class="sidebar-icon">
+                            <i class="fas fa-user" aria-hidden="true"></i>
+                        </span>
+                        Internship Preliminaries
+                    </a>
+                    <a href="#" class="sidebar-link sidebar-link-with-icon active">
+                        <span class="sidebar-icon">
+                            <i class="fas fa-map text-primary" aria-hidden="true"></i>
+                        </span>
+                        Internship Work Plan
+                    </a>
+                    <br>
+                    <h5 style="cursor: default;" class="sidebar-title" data-toggle="tooltip" data-title="Unavailable"
+                        data-placement="bottom">Accomplishments - <i class="fas fa-ban"></i></h5>
+                    <div class="sidebar-divider"></div>
+                    <a href="#" class="disabled-click sidebar-link sidebar-link-with-icon">
+                        <span class="sidebar-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </span>
+                        Week 1
+                    </a>
+                    <a href="#" class="disabled-click sidebar-link sidebar-link-with-icon">
+                        <span class="sidebar-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </span>
+                        Week 2
+                    </a>
+                    <a href="#" class="disabled-click sidebar-link sidebar-link-with-icon">
+                        <span class="sidebar-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </span>
+                        Week 3
+                    </a>
+                    <a href="#" class="disabled-click sidebar-link sidebar-link-with-icon">
+                        <span class="sidebar-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </span>
+                        Week 4
+                    </a>
+                    <a href="#" class="disabled-click sidebar-link sidebar-link-with-icon">
+                        <span class="sidebar-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </span>
+                        Week 5
+                    </a>
+                    <a href="#" class="disabled-click sidebar-link sidebar-link-with-icon">
+                        <span class="sidebar-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </span>
+                        Week 6
+                    </a>
+                    <br>
+                    <h5 class="sidebar-title">About & Contact</h5>
+                    <div class="sidebar-divider"></div>
+                    <a href="#classWorkModal" class="sidebar-link sidebar-link-with-icon">
+                        <span class="sidebar-icon">
+                            <i class="fas fa-chalkboard-teacher" aria-hidden="true"></i>
+                        </span>
+                        Classwork Thread
+                    </a>
+                    <a href="#frameworkModal" class="sidebar-link sidebar-link-with-icon">
+                        <span class="sidebar-icon">
+                            <i class="fas fa-globe" aria-hidden="true"></i>
+                        </span>
+                        Website Framework
+                    </a>
+                    <a href="#modal-info" class="sidebar-link sidebar-link-with-icon">
+                        <span class="sidebar-icon">
+                            <i class="fas fa-info" aria-hidden="true"></i>
+                        </span>
+                        EmanDev Information
+                    </a>
+                </div>
+            </div>
+    
+            <div id="padded-content">
+                <div class="page-wrapper with-navbar-fixed-bottom">
+                    <div id="main-content" class="dark-wall content-wrapper">
+                        <div class="container-fluid">
+                            <div id="contentcard" class="card">
+                                <h1 class="card-title text-center">Internship Work Plan</h1>
+                                <p class="text-center">Internship work plan is defined as the expecations for the experience of students formulated by the internship supervisor. This page contains a logical schedule and progression for work, and the specifics of the work that the students will do.</p>
+                                <p class="text-center">Our internship training was divided into two. Since our internship requires a 240-hour long training (equal to 30 days), the first 15-day training (part 1) is for Power Plant Operations Control and the second 15-day training (part 2) is for Power Plant Electrical Maintenance Works.</p>
+                                <br>
+                                <hr>
+                                <br>
+                                <h2 class="card-title text-center">Internship Job Descriptions</h2>
+                                <p class="text-center">The following trainings will be conducted in a span of 30 days from 08:00 AM in the morning to 17:00 PM in the afternoon. Students are expected to learn, understand, and be able to pass any necessary assessment or exam at the end of the training.</p>
+                                <h6 class="text-left">Power Plant Operations Control</h6>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">Topic/s</th>
+                                            <th class="text-center">Skills being developed</th>
+                                            <th class="text-center">Duration</th>
+                                            <th class="text-center">Activities</th>
+                                            <th class="text-center">Tools to be Used</th>
+                                            <th class="text-center">Expected Outcome</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th class="text-center">Plant Operation Orientation</th>
+                                            <td class="text-center">Overview of Plant Operating System</td>
+                                            <td class="text-center">1 day</td>
+                                            <td class="text-center">Orientation on power generation system to grid/substation</td>
+                                            <td class="text-center">Notebook & pen</td>
+                                            <td class="text-center">Able to understand how power plant supplied power to the transmission and distribution line, and household</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center">Central Control Room</th>
+                                            <td class="text-center">Familiarization on Thermal Plant System (Boiler System, Turbine System, & Balance of Plant)</td>
+                                            <td class="text-center">4 days</td>
+                                            <td class="text-center">Familiarization on how the thermal plant works per system (boiler, turbine, and balance of plant system)</td>
+                                            <td class="text-center">PC/Laptop, notebook, pen, radio handset and intercom</td>
+                                            <td class="text-center">Able to understand the function of all main auxillary equipment in all systems</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center">Boiler Operation</th>
+                                            <td class="text-center">Knowledge on boiler operation and data monitoring</td>
+                                            <td class="text-center">2 days</td>
+                                            <td class="text-center">Actual operation and monitoring of boiler such as periodic blowdown, soot blowing, coal feeders, and ash hoppers operations</td>
+                                            <td class="text-center">Basic hand tools, pen and paper</td>
+                                            <td class="text-center">
+                                                <p>Able to understand and learn combustion process and draft system for steam boilers</p>
+                                                <p>Able to understand the best practice operation procedures</p>
+                                                <p>Able to learn routine operation and emergency procedures</p>
+                                                <p>Able to learn safety valve and burner management system</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center">Turbine Operation</th>
+                                            <td class="text-center">Knowledge on turbine operation and data monitoring</td>
+                                            <td class="text-center">2 days</td>
+                                            <td class="text-center">Actual operation and monitoring of turbine such as hourly reading of turbine parameters, sea water scraper operations, EDG operation and turbine oil filtration</td>
+                                            <td class="text-center">Basic hand tools, pen and paper</td>
+                                            <td class="text-center">
+                                                <p>Able to understand and obtain knowledge regarding power plant operation using superheated steam</p>
+                                                <p>Able to obtain knowledge about different types of instruments and valves</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center">Demi-Plant & ECP Plant Operation</th>
+                                            <td class="text-center">Basic knowledge on water treatment plant operation and water quality sampling</td>
+                                            <td class="text-center">2 days</td>
+                                            <td class="text-center">Actual operation and monitoring of demi-water plant system and laboratory activities such as water sampling and lab assist</td>
+                                            <td class="text-center">Basic hand tools, pen and paper</td>
+                                            <td class="text-center">Able to understand and gain knowledge on how the water is treated that is being used by the whole plant</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center">Control Room, Nigata, and High-speed Operation</th>
+                                            <td class="text-center">Knowledge on Nigata engine control system and main grid power system</td>
+                                            <td class="text-center">4 days</td>
+                                            <td class="text-center">Load dispatching to DMTPP/MASELCO/NPC, recording or data gathering, starting and synchronizing of engines</td>
+                                            <td class="text-center">PC/Laptop, notebook, pen, radio handset and intercom</td>
+                                            <td class="text-center">
+                                                <p>Able to operate Nigata and its auxillaries as well as to monitor and interpret alarms and its parameters</p>
+                                                <p>Able to read and interpret single line diagram</p>
+                                                <p>Able to understand and execute load dispatching.</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="respo-footer" class="navbar d-flex navbar-fixed-bottom">
+                <span class="navbar-text">
+                    <div>
+                        <a data-toggle="tooltip" data-title="Credits" data-placement="right" href="#credits"><i class="fa fa-copyright"></i></a>
+                    </div>
+                </span>
+                <span class="navbar-text">
+                    <div>
+                        <a data-toggle="tooltip" data-title="Source Code" data-placement="right" target="_blank" href="https://github.com/EmanDev/portfolio"><i class="fa fa-database"></i></a>
+                    </div>
+                </span>
+                <span class="navbar-text ml-auto">
+                    <div>
+                        &copy; <script>
+                            document.write(new Date().getFullYear())
+                        </script> <a href="https://github.com/EmanDev" target="_blank">EmanDev</a> All
+                        Rights Reserved
+                    </div>
+                </span>
+            </div>
+    
+        </div>
+    
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+        <script src="js/halfmoon.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="js/lightbox.js"></script>
+        <script type="text/javascript">
+            if (halfmoon.getPreferredMode() == "light-mode") {
+                console.log("cookie = light-mode")
+            } else if (halfmoon.getPreferredMode() == "dark-mode") {
+                console.log("cookie = dark-mode")
+            } else if (halfmoon.getPreferredMode() == "not-set") {
+                console.log("cookie is missing")
+            }
+        </script>
+        <script type="text/javascript">
+            // Make sure that the cookie exists
+            if (halfmoon.readCookie("halfmoon_preferredMode")) {
+                if (halfmoon.readCookie("halfmoon_preferredMode") == "light-mode") {
+                    console.log("cookie said mode is light")
+                } else if (halfmoon.readCookie("halfmoon_preferredMode") == "dark-mode") {
+                    console.log("cookie said mode is dark")
+                }
+            }
+        </script>
+        <script>
+            var chosenMode = Cookies.get('halfmoon_preferredMode')
+            console.log(chosenMode)
+    
+            if (chosenMode == "dark-mode") {
+                $('div#main-content').removeClass('dark-wall')
+                $('div#main-content').removeClass('light-wall')
+                $('div#main-content').addClass('dark-wall')
+            } else {
+                if (chosenMode == "light-mode") {
+                    $('div#main-content').removeClass('light-wall')
+                    $('div#main-content').removeClass('dark-wall')
+                    $('div#main-content').addClass('light-wall')
+                }
+            }
+    
+            //switcher
+            $('button#themer').click(switchingMode);
+    
+            function switchingMode() {
+                location.reload();
+            }
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                toastAlert();
+            })
+    
+            //load theme alert
+            function toastAlert() {
+                var alertcontent =
+                    "<p class='text-justify'>• This website only works properly on desktop but mobile screen-sizes are supported.</p><p class='text-justify'>• Selected theme is also saved by default using cookies.</p>";
+                halfmoon.initStickyAlert({
+                    content: alertcontent,
+                    alertType: "alert-primary",
+                    title: "Internship Portfolio",
+                    fillType: "filled-dm",
+                    timeshown: 6000
+                })
+            }
+        </script>
     </body>
 </html>
