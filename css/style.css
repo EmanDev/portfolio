@@ -2,7 +2,7 @@
  * Style.css by Eman Marcaida (EmanDev)
  * A CSS base modifier of certain classes and IDs
  * Custom-made 15/04/2021
- * Updated - 23/06/2022
+ * Updated - 09/07/2022
  */
 
 /* Reserved */
@@ -26,6 +26,12 @@
     place-items: center;
 }
 
+.center-parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .disabled-click {
     pointer-events: none !important;
 }
@@ -37,4 +43,9 @@
 
 .tab-content{
     margin-left: 2rem;
+}
+
+.spacing-br-half {
+    display: block;
+    margin: 1.75rem;
 }

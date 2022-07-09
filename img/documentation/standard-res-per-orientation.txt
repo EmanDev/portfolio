@@ -1,0 +1,5 @@
+portrait:
+width: -default
+height: 720px
+
+class: .img-fluids
