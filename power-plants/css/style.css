@@ -1,0 +1,64 @@
+/*
+ * Style.css by Eman Marcaida (EmanDev)
+ * A CSS base modifier of certain classes and IDs
+ * Custom-made 15/04/2021
+ * Updated - 09/07/2022
+ */
+
+/* Reserved */
+
+.dark-wall {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/dark.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.light-wall {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/white.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.center-this-item {
+    display: grid;
+    place-items: center;
+}
+
+.center-parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.disabled-click {
+    pointer-events: none !important;
+}
+
+.center-but-justified {
+    text-align: justify;
+    text-align-last: center;
+}
+
+.tab-content{
+    margin-left: 2rem;
+}
+
+.spacing-br-half {
+    display: block;
+    margin: 1.75rem;
+}
+
+.img-space-right{
+    margin-right: 1rem;
+}
+
+.img-space-left{
+    margin-left: 1rem;
+}
+
+.img-space{
+    padding-left: 5px;
+    padding-right: 5px;
+}
