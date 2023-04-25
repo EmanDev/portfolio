@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <!--Disable Browser Caching-->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Surgence</title>
+    <meta name="description" content="Portfolio for Fundamentals of Power Plant Design.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/halfmoon.css">
+    <link rel="shortcut icon" href="../img/favicon-2.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="../css/lightbox.css" rel="stylesheet">
+    <!--Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+            integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous"> -->
+            <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <!--Custom index.HTML Style-->
+    <style>
+        /*
+        * Made - 16/02/2022
+        * Updated - 09/07/2022
+        */
+        ul {
+            list-style-type: disc;
+        }
+
+        ul.ul-modal {
+            list-style: none;
+        }
+
+        #padded-content {
+            padding-top: 4.5rem;
+        }
+
+        @media(max-width: 880px) {
+            #respo-footer {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .ee-color {
+            color: #f0d53d;
+        }
+
+        .zoom {
+  padding: 50px;
+  background-color: none;
+  transition: transform .2s; /* Animation */
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+    </style>
+</head>
+
+<body class="with-custom-webkit-scrollbars with-custom-css-scrollbars dark-mode" data-set-preferred-mode-onload="true">
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- Page wrapper with .with.navbar .with-sidebar .with-navbar-fixed-bottom class -->
+    <div data-sidebar-hidden="hidden" data-sidebar-type="overlayed-all"
+        class="page-wrapper with-navbar with-sidebar with-navbar-fixed-bottom">
+        <!-- Navbar (immediate child of the page wrapper) -->
+        <nav class="navbar">
+            <!-- Navbar content (with toggle sidebar button) -->
+            <div class="navbar-content">
+                <button class="btn" type="button" onclick="halfmoon.toggleSidebar()">
+                    <i class="fas fa-bars"></i>
+                    <span class="sr-only">Toggle Sidebar</span>
+                    Menu
+                </button>
+            </div>
+            <!-- Navbar brand -->
+            <a href="#" class="navbar-brand">
+                <img src="../img/pfp-circle-3.png" alt="Eman Marcaida">
+                E-Portfolio
+            </a>
+            <!-- Navbar text -->
+            <!-- Text here -->
+            <!-- Navbar nav -->
+            <div class="form-inline d-md-flex navbar-content ml-auto">
+                <button id="themer" data-toggle="tooltip" data-title="Toggle Dark Mode" data-placement="left"
+                    class="btn btn-primary" type="button" onclick="halfmoon.toggleDarkMode()"
+                    aria-label="Toggle Dark Mode"><i class="fas fa-moon" aria-hidden="true"></i></button>
+            </div>
+        </nav>
+
+        <!-- toasts -->
+        <div class="sticky-alerts"></div>
+
+        <!-- Modals -->
+        <div class="modal" id="modal-info" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content text-justify">
+                    <a href="#" class="close" role="button" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </a>
+                    <h4 class="modal-title">Information</h5>
+                        <hr>
+                        <h5 class="modal-title">Privacy</h5>
+                        <p>
+                            EmanDev.GitHub.Io does not collect any data from the people. This website is simply a static
+                            one and does not contain services which requires a user to input data onto fields that would
+                            ask for any personal information.
+                        </p>
+                        <hr>
+                        <h5 class="modal-title">Security</h5>
+                        <p>Due to the nature of the internet, some websites host files that are malicious and may cause
+                            problems to the users. EmanDev.GitHub.Io does not contain any of those files. For this
+                            reason, source of this website is <b>open</b> to the public.
+                            <br>
+                            <br>
+                            Check this link for further details: <a href="https://github.com/EmanDev?tab=repositories"
+                                target="_blank">GitHub Repositories</a>
+                        </p>
+                        <hr>
+                        <h5 class="modal-title">Copyrights</h5>
+                        <p>All possible items (images, videos, files, and etc) that can be seen here are free to use and
+                            others that are here are probably made by Me. Items made by different creators that have
+                            been used will be credited and thanked. If you have items here that I have used as part of
+                            this website and you think I do not have the permission for it to use, please contact me as
+                            soon as possible.
+                            <br>
+                            <br>
+                            Contact me through: <a
+                                href="mailto:emzzdroidlollipop@gmail.com">emzzdroidlollipop@gmail.com</a>.
+                        </p>
+
+                        <div class="text-center  mt-20">
+                            <!-- text-right = text-align: right, mt-20 = margin-top: 2rem (20px) -->
+                            <a href="#" class="btn btn-block mr-5" role="button">Close</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Framework Modal-->
+        <div class="modal" id="frameworkModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <a href="#" class="close" role="button" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </a>
+                    <h5 class="modal-title">Website Framework</h5>
+                    <p class="text-justify">
+                        The following frameworks are being used in this website.
+                    </p>
+                    <ul class="ul-modal">
+                        <li>1. <a href="https://www.gethalfmoon.com/docs/introduction/">halfmoon</a> - a beautiful
+                            front-end css framework with a built-in dark mode.</li>
+                        <li>2. <a href="https://fontawesome.com/icons">fontawesome</a> - nice and elegant css/svg icons,
+                            currently using 5.15 version.</li>
+                    </ul>
+                    <div class="text-center mt-20">
+                        <!-- text-right = text-align: right, mt-20 = margin-top: 2rem (20px) -->
+                        <a href="#" class="btn btn-primary btn-block mr-5" role="button">Okay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Photo Credits Modal-->
+        <div class="modal" id="credits" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <a href="#" class="close" role="button" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </a>
+                    <h5 class="modal-title">Credits</h5>
+                    <p class="text-justify">
+                        The following are credited for their work and thanked for allowing people to use their work.
+                    </p>
+                    <ul class="ul-modal">
+                        <li>1. Photo by <a
+                                href="https://unsplash.com/@dokawastaken?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tim
+                                Kabel</a> on <a
+                                href="https://unsplash.com/s/photos/circuit?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.
+                        </li>
+                        <li>2. Photo by <a
+                                href="https://unsplash.com/@sahandbabali?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sahand
+                                Babali</a> on <a
+                                href="https://unsplash.com/s/photos/circuit?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.
+                        </li>
+                        <li>3.
+                            Icons by <a href="https://www.flaticon.com/">Flaticon</a>.
+                        </li>
+                    </ul>
+                    <div class="text-center mt-20">
+                        <!-- text-right = text-align: right, mt-20 = margin-top: 2rem (20px) -->
+                        <a href="#" class="btn btn-primary btn-block mr-5" role="button">Okay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar-overlay" onclick="halfmoon.toggleSidebar()"></div>
+
+        <div class="sidebar">
+            <div class="sidebar-menu">
+                <h5 class="sidebar-title">Navigation</h5>
+                <div class="sidebar-divider"></div>
+                <a href="../index.html" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-briefcase" aria-hidden="true"></i>
+                    </span>
+                    Home
+                </a>
+                <a href="../intership-index.html" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-user" aria-hidden="true"></i>
+                    </span>
+                    Internship Training
+                </a>
+                <a href="../edu-tour.html" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-map" aria-hidden="true"></i>
+                    </span>
+                    Educational Tour
+                </a>
+                <a href="../ticket-to-geothermal-power-plant.html" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-industry-alt" aria-hidden="true"></i>
+                    </span>
+                    Power Plant Design
+                </a>
+                <br>
+                <h5 class="sidebar-title">Requirements</h5>
+                <div class="sidebar-divider"></div>
+                <a href="pre-departure.html" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-house-leave" aria-hidden="true"></i>
+                    </span>
+                    Pre-departure
+                </a>
+                <a href="debriefing.html" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-broom" aria-hidden="true"></i>
+                    </span>
+                    Debriefing
+                </a>
+                <a href="evaluation.html" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-cogs" aria-hidden="true"></i>
+                    </span>
+                    Evaluation
+                </a>
+                <a href="overall-insight.html" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-lightbulb-on" aria-hidden="true"></i>
+                    </span>
+                    Overall Insight
+                </a>
+                <a href="seminars.html" class="sidebar-link sidebar-link-with-icon active">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-podium text-primary" aria-hidden="true"></i>
+                    </span>
+                    Seminars
+                </a>
+                <a href="#" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fab fa-searchengin" aria-hidden="true"></i>
+                    </span>
+                    Surgence
+                </a>
+                <br>
+                <h5 class="sidebar-title">Destinations</h5>
+                <div class="sidebar-divider"></div>
+                <a href="../edu-tour/gigamare.html" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-ship" aria-hidden="true"></i>
+                    </span>
+                    GigaMare
+                </a>
+                <a href="../edu-tour/subic-enerzone.html" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-bolt" aria-hidden="true"></i>
+                    </span>
+                    Subic Enerzone
+                </a>
+                <a href="../edu-tour/rmr-electric.html" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-conveyor-belt" aria-hidden="true"></i>
+                    </span>
+                    RMR Electric
+                </a>
+                <a href="../edu-tour/dti-bps.html" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-tablet" aria-hidden="true"></i>
+                    </span>
+                    DTI-BPS
+                </a>
+                <a href="../edu-tour/cse.html" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-power-off" aria-hidden="true"></i>
+                    </span>
+                    CSE Power
+                </a>
+                <br>
+                <h5 class="sidebar-title">About & Contact</h5>
+                <div class="sidebar-divider"></div>
+                <a href="#frameworkModal" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-globe" aria-hidden="true"></i>
+                    </span>
+                    Website Framework
+                </a>
+                <a href="#modal-info" class="sidebar-link sidebar-link-with-icon">
+                    <span class="sidebar-icon">
+                        <i class="fas fa-info" aria-hidden="true"></i>
+                    </span>
+                    EmanDev Information
+                </a>
+            </div>
+        </div>
+
+        <div id="padded-content">
+            <div class="page-wrapper with-navbar-fixed-bottom">
+                <div id="main-content" class="dark-wall content-wrapper">
+                    <div class="container-fluid">
+                        <div id="contentcard" class="card">
+                                <div class="container-fluid">
+                                    <div class="center-this-item">
+                                        <h4>Surgence - Research Expo 2023</h4>
+                                        <p class="text-extra-letter-spacing center-but-justified">One of the outline for presenting an undergraduate thesis for partner universities across the Bicol Region focusing on the course of Bachelor of Science in Electrical Engineering</p>
+                                        <p class="text-extra-letter-spacing center-but-justified">The main reason for having a research expo is to provide a platform for researchers to showcase their work and share their findings with others. Research expos are typically organized by academic institutions, research organizations, or scientific communities to bring together researchers, industry professionals, and the public to exchange knowledge and ideas. Additionally, research expos provide an opportunity for attendees to learn about cutting-edge research in various fields, discover new technologies and innovations, and engage in discussions with researchers and experts in their respective fields. This can help to foster interdisciplinary collaborations and knowledge sharing, which can lead to new discoveries and advancements in various fields.</p>
+                                        <p class="text-extra-letter-spacing center-but-justified">However, due to unforeseen circumstances, I was unable to attend because I was sick. Provided below is my excuse letter and although I am not present, I was registered and payed a sum of 150 pesos.</p>
+                                    </div>
+                                    <hr>
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="center-this-item">
+                                                    <h4>Gallery</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <a href="../img/edu-tour/requirements/surgence/g1.png" data-lightbox="sur" data-title="Surgence"><img src="../img/edu-tour/requirements/surgence/g1.png" alt="Surgence" class="img-fluid rounded img-space"></a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="../img/edu-tour/requirements/surgence/g2.png" data-lightbox="sur" data-title="Surgence 2"><img src="../img/edu-tour/requirements/surgence/g2.png" alt="Surgence 2" class="img-fluid rounded img-space"></a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="../img/edu-tour/requirements/surgence/g3.png" data-lightbox="sur" data-title="Surgence 3"><img src="../img/edu-tour/requirements/surgence/g3.png" alt="Surgence 3" class="img-fluid rounded img-space"></a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <a href="../img/edu-tour/requirements/surgence/g4.png" data-lightbox="sur" data-title="Surgence 4"><img src="../img/edu-tour/requirements/surgence/g4.png" alt="Surgence 4" class="img-fluid rounded img-space"></a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="../img/edu-tour/requirements/surgence/g5.jpg" data-lightbox="sur" data-title="Surgence 5"><img src="../img/edu-tour/requirements/surgence/g5.jpg" alt="Surgence 5" class="img-fluid rounded img-space"></a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="../img/edu-tour/requirements/surgence/g6.jpg" data-lightbox="sur" data-title="Surgence 5"><img src="../img/edu-tour/requirements/surgence/g6.jpg" alt="Surgence 6" class="img-fluid rounded img-space"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <div id="respo-footer" class="navbar d-flex navbar-fixed-bottom">
+            <span class="navbar-text">
+                <div>
+                    <a data-toggle="tooltip" data-title="Credits" data-placement="right" href="#credits"><i class="fa fa-copyright"></i></a>
+                </div>
+            </span>
+            <span class="navbar-text">
+                <div>
+                    <a data-toggle="tooltip" data-title="Source Code" data-placement="right" target="_blank" href="https://github.com/EmanDev/portfolio"><i class="fa fa-database"></i></a>
+                </div>
+            </span>
+            <span class="navbar-text ml-auto">
+                <div>
+                    &copy; <script>
+                        document.write(new Date().getFullYear())
+                    </script> <a href="https://github.com/EmanDev" target="_blank">EmanDev</a> All
+                    Rights Reserved
+                </div>
+            </span>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="../js/halfmoon.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="../js/lightbox.js"></script>
+    <script type="text/javascript">
+        if (halfmoon.getPreferredMode() == "light-mode") {
+            console.log("cookie = light-mode")
+        } else if (halfmoon.getPreferredMode() == "dark-mode") {
+            console.log("cookie = dark-mode")
+        } else if (halfmoon.getPreferredMode() == "not-set") {
+            console.log("cookie is missing")
+        }
+    </script>
+    <script type="text/javascript">
+        // Make sure that the cookie exists
+        if (halfmoon.readCookie("halfmoon_preferredMode")) {
+            if (halfmoon.readCookie("halfmoon_preferredMode") == "light-mode") {
+                console.log("cookie said mode is light")
+            } else if (halfmoon.readCookie("halfmoon_preferredMode") == "dark-mode") {
+                console.log("cookie said mode is dark")
+            }
+        }
+    </script>
+    <script>
+        var chosenMode = Cookies.get('halfmoon_preferredMode')
+        console.log(chosenMode)
+
+        if (chosenMode == "dark-mode") {
+            $('div#main-content').removeClass('dark-wall')
+            $('div#main-content').removeClass('light-wall')
+            $('div#main-content').addClass('dark-wall')
+        } else {
+            if (chosenMode == "light-mode") {
+                $('div#main-content').removeClass('light-wall')
+                $('div#main-content').removeClass('dark-wall')
+                $('div#main-content').addClass('light-wall')
+            }
+        }
+
+        //switcher
+        $('button#themer').click(switchingMode);
+
+        function switchingMode() {
+            location.reload();
+        }
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            toastAlert();
+        })
+
+        //load theme alert
+        function toastAlert() {
+            var alertcontent =
+                "<p class='text-justify'>• This website only works properly on desktop but mobile screen-sizes are supported.</p><p class='text-justify'>• Selected theme is also saved by default using cookies.</p>";
+            halfmoon.initStickyAlert({
+                content: alertcontent,
+                alertType: "alert-primary",
+                title: "Surgence",
+                fillType: "filled-dm",
+                timeshown: 6000
+            })
+        }
+    </script>
+</body>
+
+</html>
