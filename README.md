@@ -1,6 +1,8 @@
-# Responsive Portfolio Website Patrick
-## [Watch it on youtube](https://youtu.be/Y4-xMb-eHOQ)
-### Responsive Portfolio Website Patrick
+# Portfolio Website
+- This is my E-Portfolio Website necessary to cater my work and career.
+
+## [Guide - so I won't forget](https://youtu.be/Y4-xMb-eHOQ)
+### Responsive Portfolio Website code Patrick
 
 - Responsive Portfolio Website Design Using HTML CSS & JavaScript
 - Contains animations when scrolling.
@@ -12,5 +14,3 @@
 - Compatible with all mobile devices and with a beautiful and pleasant user interface.
 
 💙 Join the channel to see more videos like this. [Bedimcode](https://www.youtube.com/@Bedimcode)
-
-![preview img](/preview.png)
