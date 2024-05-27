@@ -12,6 +12,7 @@
 
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/styles.css">
+      <link rel="stylesheet" href="assets/css/lightbox.css">
 
       <title>Engr. Eman</title>
    </head>
@@ -149,7 +150,7 @@
 
                   <a href="assets/docs/CV_MARCAIDA, EDUARD EMMANUEL E..pdf" class="button" target="_blank">CV</a>
                   <!-- <a href="#contact" class="button button-disabled">Résumé</a> -->
-                  <a href="assets/img/rating.png" target="_blank" class="button">PRC Ratings</a>
+                  <a href="assets/img/rating.png" data-lightbox="prc-ratings" data-title="PRC Ratings" data-alt="PRC Ratings" class="button">PRC Ratings</a>
                </div>
 
                <div class="about__image">
@@ -395,6 +396,19 @@
 
       <!--=============== EMAIL JS ===============-->
       <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+      <!--=============== Lightbox 2 ===============-->
+      <script src="assets/js/lightbox-plus-jquery.min.js"></script>
+
+      <!--=============== Console Checks ===============-->
+      <script>
+         // Check if jQuery is active.
+         if (window.jQuery){
+            console.log("jQuery is active.");
+         } else {
+            console.log("jQuery is NOT active.");
+         };
+      </script>
 
       <!--=============== MAIN JS ===============-->
       <script src="assets/js/main.js"></script>
