@@ -56,6 +56,77 @@
          </nav>
       </header>
 
+      <!--MODALS-->
+      <div id="modalREE" class="modal-container">
+         <div class="modal-box">
+             <h2>Registered Electrical Engineer (REE)</h2>
+             <table>
+                 <tr>
+                     <td>Full Name:</td>
+                     <td>MARCAIDA, EDUARD EMMANUEL ESGUERRA</td>
+                 </tr>
+                 <tr>
+                     <td>Application No:</td>
+                     <td>028948</td>
+                 </tr>
+                 <tr>
+                     <td>Electrical Engineering Professional Subjects:</td>
+                     <td>88.00</td>
+                 </tr>
+                 <tr>
+                     <td>Engineering Sciences and Allied Subjects:</td>
+                     <td>87.00</td>
+                 </tr>
+                 <tr>
+                     <td>Mathematics:</td>
+                     <td>90.00</td>
+                 </tr>
+                 <tr>
+                     <td>Average:</td>
+                     <td class="remarks">88.20</td>
+                 </tr>
+                 <tr>
+                     <td>Remarks:</td>
+                     <td class="remarks">PASSED</td>
+                 </tr>
+             </table>
+             <button class="close-btn">OK</button>
+         </div>
+     </div>
+     
+     <div id="modalRME" class="modal-container">
+         <div class="modal-box">
+             <h2>Registered Master Electrician (RME)</h2>
+             <table>
+                 <tr>
+                     <td>Full Name:</td>
+                     <td>MARCAIDA, EDUARD EMMANUEL ESGUERRA</td>
+                 </tr>
+                 <tr>
+                     <td>Application No:</td>
+                     <td>020802</td>
+                 </tr>
+                 <tr>
+                     <td>Technical Subjects:</td>
+                     <td>87.00</td>
+                 </tr>
+                 <tr>
+                     <td>Philippine Electrical Code, Parts 1 and 2:</td>
+                     <td>80.00</td>
+                 </tr>
+                 <tr>
+                     <td>Average:</td>
+                     <td class="remarks">83.50</td>
+                 </tr>
+                 <tr>
+                     <td>Remarks:</td>
+                     <td class="remarks">PASSED</td>
+                 </tr>
+             </table>
+             <button class="close-btn">OK</button>
+         </div>
+     </div>
+
       <!--==================== MAIN ====================-->
       <main class="main">
          <!--==================== HOME ====================-->
@@ -149,8 +220,24 @@
                   </p>
 
                   <a href="assets/docs/CV_MARCAIDA, EDUARD EMMANUEL E..pdf" class="button" target="_blank">CV</a>
+                  
                   <!-- <a href="#contact" class="button button-disabled">Résumé</a> -->
-                  <a href="assets/img/rating.png" data-lightbox="prc-ratings" data-title="PRC Ratings" data-alt="PRC Ratings" class="button">PRC Ratings</a>
+                  <!--<a href="assets/img/rating.png" data-lightbox="prc-ratings" data-title="PRC Ratings" data-alt="PRC Ratings" class="button">PRC Ratings</a>-->
+
+                  <!--#WORK-->
+                  <div class="dropdown">
+                     <div id="dropbtn">
+                        <button>
+                           <span class="dropdown__name">PRC Rating</span>
+                           <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                     </div>
+                     <div class="dropdown__menu">
+                        <a href="#" onclick="event.preventDefault();" class="modal-REE" data-target="#modalREE">Registered Electrical Engineer</a>
+                        <a href="#" onclick="event.preventDefault();" class="modal-RME" data-target="#modalRME">Registered Master Electrician</a>
+                     </div>
+                  </div>
+
                </div>
 
                <div class="about__image">

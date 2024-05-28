@@ -111,3 +111,27 @@ sr.reveal(`.home__image`, {origin: 'bottom'})
 sr.reveal(`.about__data, .skills__data`, {origin: 'left'})
 sr.reveal(`.about__image, .skills__content`, {origin: 'right'})
 sr.reveal(`.services__card, .projects__card`, {interval: 100})
+
+// Show the modal when the "Show Modal" buttons are clicked
+document.querySelectorAll('.modal-REE, .modal-RME').forEach(button => {
+    button.addEventListener('click', (event) => {
+        const targetModal = event.target.dataset.target;
+        document.querySelector(targetModal).classList.add('active');
+    });
+});
+
+// Close the modal when the "OK" button is clicked
+document.querySelectorAll('.close-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        button.closest('.modal-container').classList.remove('active');
+    });
+});
+
+// Close the modal when clicking outside the modal content
+document.querySelectorAll('.modal-container').forEach(container => {
+    container.addEventListener('click', (event) => {
+        if (event.target === container) {
+            container.classList.remove('active');
+        }
+    });
+});
