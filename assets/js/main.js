@@ -117,6 +117,7 @@ document.querySelectorAll('.modal-REE, .modal-RME').forEach(button => {
     button.addEventListener('click', (event) => {
         const targetModal = event.target.dataset.target;
         document.querySelector(targetModal).classList.add('active');
+        document.body.classList.add('modal-active'); // Add this line to disable scrolling
     });
 });
 
@@ -124,6 +125,7 @@ document.querySelectorAll('.modal-REE, .modal-RME').forEach(button => {
 document.querySelectorAll('.close-btn').forEach(button => {
     button.addEventListener('click', () => {
         button.closest('.modal-container').classList.remove('active');
+        document.body.classList.remove('modal-active'); // Add this line to enable scrolling
     });
 });
 
@@ -132,6 +134,7 @@ document.querySelectorAll('.modal-container').forEach(container => {
     container.addEventListener('click', (event) => {
         if (event.target === container) {
             container.classList.remove('active');
+            document.body.classList.remove('modal-active'); // Add this line to enable scrolling
         }
     });
 });

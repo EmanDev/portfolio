@@ -1067,3 +1067,7 @@ a.footer_using_link_v2:hover{
   font-weight: var(--font-semi-bold);
   color: var(--remarks-color);
 }
+
+body.modal-active{
+  overflow: hidden;
+}
