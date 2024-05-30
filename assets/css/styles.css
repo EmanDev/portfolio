@@ -1075,3 +1075,18 @@ a.footer_using_link_v2:hover{
 body.modal-active{
   overflow: hidden;
 }
+
+/* Scroll Progress Bar */
+.progress__container {
+  width: 100%;
+  height: 5px;
+  position: relative;
+  background-color: transparent;
+}
+
+.progress__bar {
+  width: 0%;
+  height: 5px;
+  position: absolute;
+  background-color: var(--first-color);
+}
