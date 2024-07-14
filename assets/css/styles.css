@@ -896,7 +896,7 @@ a.footer_using_link_v2:hover{
   text-decoration: underline;
 }
 
-.button-disabled{
+.button-disabled {
   pointer-events: none;
   cursor: default;
   background-color: #3c3c3c;
